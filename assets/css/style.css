@@ -18,6 +18,12 @@ header .container {
 header .leftside {
     display: flex;
 }
+header .menu-mobile {
+    display: none;
+}
+header nav {
+    display: flex;
+}
 header nav li {
     margin-right: 10px;
 }
@@ -30,6 +36,12 @@ header nav li a {
     display: flex;
     align-items: center;
     border-bottom: 5px solid transparent;
+}
+.search {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
 }
 header nav li a:hover {
     border-bottom: 5px solid #F7192E;
@@ -48,4 +60,71 @@ header .rightside .rightside-info {
 }
 header .rightside .rightside-info .bold {
     font-weight: 700;
+}
+
+.slider {
+    overflow: hidden;
+    display: flex;
+}
+.sliders {
+    width: 1791px;
+    height: 430px;
+    display: flex;
+    transition: all linear 0.3s;
+}
+.slider-item {
+    width: 597px;
+    height: 430px;
+    background-position: center;
+    background-size: cover;
+}
+.slider-button {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button-left,
+.button-right {
+    cursor: pointer;
+    padding: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 436px) {
+    header .menu-mobile {
+        display: flex;
+    }
+    header .logo {
+        display: flex;
+        justify-content: center;
+    }
+    header nav li {
+        margin-right: 0;
+    }
+    header nav li a {
+        display: none;
+        padding: 0;
+    }
+    header .rightside {
+        display: none;
+    }
 }

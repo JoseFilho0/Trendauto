@@ -9,6 +9,9 @@
 <body>
     <header>
         <div class="container header-area">
+            <div class="menu-mobile">
+                <img src="./assets/images/menu.png" alt="menu">
+            </div>
             <div class="logo">
                 <a href=""><img src="./assets/images/logo.png" alt="logo"></a>
             </div>
@@ -20,8 +23,8 @@
                     <li><a href="">Sobre</a></li>
                     <li><a href="">Contato</a></li>
                     <li><a href="">Blog</a></li>
-                    <li><a href=""><img src="./assets/images/search.png" alt="busca"></a></li>
                 </ul>
+                <div class="search"><img src="./assets/images/search.png" alt="busca"></div>
             </nav>
             <div class="rightside">
                 <div class="rightside-img">
@@ -34,5 +37,19 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="slider">
+            <div class="slider-button">
+                <div class="button button-left" onclick="previous()"><img src="./assets/images/seta-esquerda-red.png" alt="seta-esquerda"></div>
+                <div class="button button-right" onclick="next()"><img src="./assets/images/seta-direita-red.png" alt="seta-direita"></div>
+            </div>
+            <div class="sliders">
+                <div class="slider-item" style="background-image: url('./assets/images/carro-main.png');"></div>
+                <div class="slider-item" style="background-image: url('./assets/images/carro-re.png');"></div>
+                <div class="slider-item" style="background-image: url('./assets/images/carro-lateral.png');"></div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
 </body>
 </html>
