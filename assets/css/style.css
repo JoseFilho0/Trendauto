@@ -8,6 +8,7 @@
 }
 body {
     font-family: 'Exo';
+    background-color: #F0F2F4;
 }
 header .container {
     display: flex;
@@ -94,7 +95,127 @@ header .rightside .rightside-info .bold {
 
 
 
+.section-only {
+    position: relative;
+    margin-top: -50px;
+    max-width: 887px;
+    background-color: #fff;
+    padding: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.content-top .marca {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F7192E;
+}
+.content-top .modelo {
+    font-size: 30px;
+    font-weight: 500;
+    color: #393C42;
+}
+.content-top .infos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.content-top .infos .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F0F2F4;
+    width: 182px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+.content-top .info .info-title {
+    color: #8B929E;
+    font-size: 12px;
+    font-weight: 500;
+}
+.content-top .info .info-content {
+    color: #302D2D;
+    font-size: 16px;
+    font-weight: 700;
+}
 
+.section-standard {
+    max-width: 887px;
+    background-color: #fff;
+    padding: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.section-standard .info .info-title-standard {
+    margin-bottom: 30px;
+    color: #8B929E;
+    font-size: 16px;
+    font-weight: 500;
+}
+.section-standard .info .info-text-standard {
+    color: #302D2D;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+
+.content-bottom .info-title-standard {
+    color: #8B929E;
+    font-size: 16px;
+    font-weight: 500
+}
+.content-bottom .info-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.content-bottom .info-content .info-content-standard {
+    color: #302D2D;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+
+.lateral{
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 340px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    right: 10px;
+    margin-top: -50px;
+    font-size: 16px;
+}
+.lateral .value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F7192E;
+}
+.lateral .price {
+    font-size: 30px;
+    font-weight: 500;
+    color: #393C42;
+    margin-bottom: 10px;
+}
+.lateral a {
+    display: flex;
+    align-items: center;
+    background-color: #1F8D7D;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 60px;
+    border-radius: 10px;
+    gap: 5px;
+}
 
 
 
@@ -126,5 +247,103 @@ header .rightside .rightside-info .bold {
     }
     header .rightside {
         display: none;
+    }
+
+    .slider-button img {
+        width: 40px;
+        height: 40px;
+    }
+    .sliders {
+        width: 798px;
+        height: 230px;
+    }
+    .slider-item {
+        width: 266px;
+        height: 230px;
+    }
+
+    .section-only, 
+    .section-standard  {
+        margin-top: -30px;
+        padding: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .content-top .marca {
+        font-size: 14px
+    }
+    .content-top .modelo {
+        font-size: 20px;
+    }
+    .content-top .infos {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 15px;
+    }
+    .content-top .infos .info {
+        width: 140px;
+        height: 52px;
+        padding: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .content-top .info .info-title {
+        font-size: 10px;
+    }
+    .content-top .info .info-content {
+        font-size: 14px;
+    }
+
+    
+    .content-bottom .info-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content-bottom .info-content .info-content-standard {
+        font-size: 12px;
+    }
+
+
+    .lateral {
+        margin-top: 133px;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        background-color: #1F8D7D;
+        padding: 20px;
+    }
+    .value-price {
+        display: flex;
+        justify-content: space-between;
+    }
+    .lateral .value {
+        font-size: 14px;
+        color: #fff;
+    }
+    .lateral .price {
+        font-size: 24px;
+        color: #fff;
+    }
+    .lateral a {
+        background-color: #090000;
+        justify-content: center;
+        padding: 10px 60px;
+    }
+}
+@media(max-width: 376px) {
+    .content-top .marca,
+    .content-top .modelo {
+        padding-left: 10px;
+    }
+}
+@media(max-width: 321px) {
+    .content-top .marca,
+    .content-top .modelo {
+        padding-left: 30px;
+    }
+    .content-top .infos .info {
+        width: 120px;
+        height: 47px;
     }
 }
