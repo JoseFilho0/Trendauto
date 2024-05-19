@@ -1,26 +1,23 @@
+let prev = document.querySelector("#prev");
+let next = document.querySelector("#next");
 
-let totSlides = document.querySelectorAll('.slider-item').length;
-let passSlide = 0
+let slider = document.querySelector(".slider");
+let list = document.querySelector(".list");
 
-document.querySelector('.slider-button').style.height = 
-    `${document.querySelector('.slider').clientHeight}px`;
+next.onclick = function () {
+    showSlider('next');
+};
 
-function previous() {
-    passSlide --;
-    if(passSlide < 0) {
-        passSlide = totSlides -1
+prev.onclick = function () {
+    showSlider('prev');
+};
+
+function showSlider(type) {
+    let items = document.querySelectorAll(".item");
+
+    if (type === 'next') {
+        list.appendChild(items[0]);
+    } else if (type === 'prev') {
+        list.insertBefore(items[items.length -1], items[0]);
     }
-    upDateMargin()
-}
-function next() {
-    passSlide ++;
-    if(passSlide > (totSlides - 1)) {
-        passSlide = 0
-    }
-    upDateMargin()
-}
-
-function upDateMargin() {
-    let newSlide = (passSlide * document.body.clientWidth)
-    document.querySelector('.sliders').style.marginLeft = `-${newSlide}px`;
 }
