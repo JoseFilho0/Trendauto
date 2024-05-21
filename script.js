@@ -1,3 +1,19 @@
+window.onload = function () {
+    document.querySelector('.menu-opener').addEventListener("click", function() {
+        let navLinks = document.querySelectorAll("header nav li a");
+        navLinks.forEach(function(navLink) {
+            if (navLink.style.display == 'flex') {
+                navLink.style.display = 'none';
+            } else {
+                navLink.style.display = 'flex';
+            }
+        });
+    });
+}
+
+
+
+
 let prev = document.querySelector("#prev");
 let next = document.querySelector("#next");
 
@@ -23,33 +39,30 @@ function showSlider(type) {
 }
 
 
-/*document.addEventListener('scroll', function() {
-    let lateral = document.querySelector('.lateral');
-    let footer = document.querySelector('.content-footer');
 
-    let lateralRect = lateral.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
 
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+let change = document.getElementById("close-img");
 
-    let lateralTop = scrollTop + lateralRect.top;
-    let footerTop = scrollTop + footerRect.top;
+let changeImg = document.getElementById("img01");
+let images = document.getElementsByClassName("clickable");
 
-    if (scrollTop > lateralTop - 10) {
-        if (footerRect.top <= lateralRect.height + 10) {
-            lateral.classList.remove('fixed');
-            lateral.classList.add('stop');
-            lateral.style.top = (footerTop - lateralRect.height - 10) + 'px';
-        } else {
-            lateral.classList.remove('stop');
-            lateral.classList.add('fixed');
-            lateral.style.top = '40px';
-        }
-    } else {
-        lateral.classList.remove('fixed');
-        lateral.classList.remove('stop');
-        lateral.style.top = '100vh'; // Define a posição inicial da lateral
+
+for (let i = 0; i < images.length; i++) {
+    images[i].onclick = function() {
+        change.style.display = "block";
+        changeImg.src = this.src;
     }
-});*/
+}
+
+
+let span = document.getElementsByClassName("close")[0];
+
+span.onclick = function () {
+    change.style.display = "none"
+}
+
+
+
+
 
 
