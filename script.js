@@ -63,6 +63,10 @@ span.onclick = function () {
 
 
 
+let hide = document.querySelector("main");
+let lateralDiv = document.querySelector(".lateral")
 
-
+hide.addEventListener("click", () => {
+    lateralDiv.style.display = "none";
+});
 
